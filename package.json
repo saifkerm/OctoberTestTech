@@ -1,0 +1,65 @@
+{
+  "name": "octobertesttech",
+  "version": "1.0.0",
+  "description": "Test technique kermoun saifeddine pour October",
+  "main": "index.js",
+  "scripts": {
+    "compile": "./node_modules/.bin/tsc",
+    "test": "mocha --exit -r ts-node/register test/**/**/*.spec.ts",
+    "watch": "./node_modules/.bin/tsc -w",
+    "start": "./node_modules/.bin/tsc && node dist/index",
+    "restart": "./node_modules/.bin/tsc && node dist/index"
+  },
+  "nyc": {
+    "include": [
+      "src/*.ts",
+      "src/**/*.ts"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "json",
+      "html"
+    ],
+    "all": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saifkerm/OctoberTestTech.git"
+  },
+  "author": "Kermoun Saifeddine",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saifkerm/OctoberTestTech/issues"
+  },
+  "homepage": "https://github.com/saifkerm/OctoberTestTech#readme",
+  "devDependencies": {
+    "@types/chai": "^4.2.3",
+    "@types/debug": "^4.1.5",
+    "@types/express": "^4.17.1",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.7.12",
+    "@types/supertest": "^2.0.8",
+    "chai": "^4.2.0",
+    "http-debug": "^0.1.2",
+    "mocha": "^6.2.1",
+    "mocha-junit-reporter": "^1.23.1",
+    "nyc": "^14.1.1",
+    "supertest": "^4.0.2",
+    "ts-node": "^8.4.1",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.4"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1",
+    "dotenv": "^8.1.0"
+  }
+}
